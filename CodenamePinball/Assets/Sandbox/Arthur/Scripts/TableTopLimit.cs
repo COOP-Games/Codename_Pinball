@@ -8,9 +8,16 @@ public class TableTopLimit : MonoBehaviour
     [SerializeField]
     private GameObject bridge;
 
+    [SerializeField]
+    private GameObject limitP1;
+
+    [SerializeField]
+    private GameObject limitP2;
+
     private void OnTriggerExit(Collider other) 
     {
-        this.GetComponent<BoxCollider>().isTrigger = false;
+        limitP1.GetComponent<BoxCollider>().isTrigger = false;
+        limitP2.GetComponent<BoxCollider>().isTrigger = false;
         Destroy(bridge);       
     }
 }
