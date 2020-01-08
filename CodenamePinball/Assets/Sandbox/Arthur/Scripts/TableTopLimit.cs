@@ -16,8 +16,16 @@ public class TableTopLimit : MonoBehaviour
 
     private void OnTriggerExit(Collider other) 
     {
-        limitP1.GetComponent<BoxCollider>().isTrigger = false;
-        limitP2.GetComponent<BoxCollider>().isTrigger = false;
+        if(limitP1)
+        {
+            limitP1.GetComponent<BoxCollider>().isTrigger = false;
+        }
+    
+        if(limitP2)
+        {
+            limitP2.GetComponent<BoxCollider>().isTrigger = false;
+        }
+        
         Destroy(bridge);       
     }
 }

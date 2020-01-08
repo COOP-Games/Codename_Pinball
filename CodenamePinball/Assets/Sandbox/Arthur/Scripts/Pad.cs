@@ -9,7 +9,7 @@ public class Pad : MonoBehaviour
     [SerializeField]
     private float pressedPosition = 45f;
     [SerializeField]
-    private float hitStrenght = 10000f;
+    private float hitStrenght = 1f;
     [SerializeField]
     private float padDamper = 150f;
     [SerializeField]
