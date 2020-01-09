@@ -24,9 +24,14 @@ public class Main_Menu : MonoBehaviour
     private bool is_campaign_buttons_active;
     private bool is_options_buttons_active;
 
+    // Cached reference
+    GameManager gameManager;
+
     // Start is called before the first frame update
     void Start()
     {
+        gameManager = FindObjectOfType<GameManager>();
+        gameManager.LoadGame();
         StartState();
     }
 
@@ -48,9 +53,17 @@ public class Main_Menu : MonoBehaviour
         }
         is_options_buttons_active = false;
 
-        for (int i = 0; i < campaign_menu_buttons.Length; i++)
+        for (int i = 1; i < campaign_menu_buttons.Length; i++)
         {
             campaign_menu_buttons[i].gameObject.SetActive(false);
+            
+            if(i <= gameManager.GetLevelsUnlocked())
+            {
+                campaign_menu_buttons[i].interactable = true;
+            }else
+            {
+                campaign_menu_buttons[i].interactable = false;
+            }
         }
         is_campaign_buttons_active = false;
 

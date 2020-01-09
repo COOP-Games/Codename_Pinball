@@ -57,7 +57,7 @@ public class Block : MonoBehaviour
     private void DestroyBlock()
     {
         Destroy(gameObject);//destroi o objeto
-        gameManager.AddToScore(); // aumenta a pontuacao do jogador
+        //TODO gameManager.AddToScore(); // aumenta a pontuacao do jogador
         level.removeOneBreakableBlock(); // diminui em 1 o numero total de blocos da fase
     }
 }
