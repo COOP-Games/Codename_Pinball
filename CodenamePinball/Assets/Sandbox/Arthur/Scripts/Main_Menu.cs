@@ -20,7 +20,6 @@ public class Main_Menu : MonoBehaviour
     [SerializeField]
     private AudioClip[] sounds;
 
-    private bool is_main_menu_buttons_active;
     private bool is_campaign_buttons_active;
     private bool is_options_buttons_active;
 
@@ -43,7 +42,6 @@ public class Main_Menu : MonoBehaviour
 
     private void StartState()
     {
-        is_main_menu_buttons_active = true;
         is_campaign_buttons_active = false;
         is_options_buttons_active = false;
 
@@ -71,7 +69,6 @@ public class Main_Menu : MonoBehaviour
         {
             main_menu_buttons[i].gameObject.SetActive(true);
         }
-        is_main_menu_buttons_active = true;
     }
     /** Return to the first screen */
     public void MainMenu()
@@ -98,7 +95,6 @@ public class Main_Menu : MonoBehaviour
         {
             main_menu_buttons[i].gameObject.SetActive(true);
         }
-        is_main_menu_buttons_active = true;
     }
 
     /** Load the campaign screen */
@@ -108,7 +104,6 @@ public class Main_Menu : MonoBehaviour
         {
             main_menu_buttons[i].gameObject.SetActive(false);
         }
-        is_main_menu_buttons_active = false;
 
         for (int i = 0; i < campaign_menu_buttons.Length; i++)
         {
@@ -126,7 +121,6 @@ public class Main_Menu : MonoBehaviour
         {
             main_menu_buttons[i].gameObject.SetActive(false);
         }
-        is_main_menu_buttons_active = false;
 
         for (int i = 0; i < options_menu_buttons.Length; i++)
         {

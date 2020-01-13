@@ -11,7 +11,7 @@ public class SceneLoader : MonoBehaviour
     {
         gameManager = FindObjectOfType<GameManager>();
     }
-    
+
     public void LoadNextScene()
     {
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;//faz a variavel guardar o indice da cena atual de jogo
@@ -27,6 +27,16 @@ public class SceneLoader : MonoBehaviour
     public void QuitGame()
     {
         Application.Quit();
+    }
+
+    public void LoadLevel(int level_index)
+    {
+        // string levelName = "Assets/Scenes/Level_" + level_index + ".unity";
+        // string levelName = "Assets/Scenes/Level_00.unity";
+        string levelName = "Level_"+level_index;
+        Debug.Log("Level: " + levelName);
+
+        SceneManager.LoadScene(levelName,LoadSceneMode.Single);
     }
 }
 

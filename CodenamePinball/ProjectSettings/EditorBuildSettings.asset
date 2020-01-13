@@ -5,7 +5,13 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Sandbox/Arthur/MainMenu.unity
+    guid: 37574ff68d6b6454291a40374b7ed6e0
+  - enabled: 1
+    path: Assets/Sandbox/Arthur/Level_0.unity
+    guid: cfa8d4d521aecd34496b146570ec0c94
   m_configObjects: {}
